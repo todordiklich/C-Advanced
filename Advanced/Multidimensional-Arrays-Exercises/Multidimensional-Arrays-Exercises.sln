@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. Diagonal Difference", "1. Diagonal Difference\1. Diagonal Difference.csproj", "{8574B9E3-C450-4082-B322-C800AFA1583A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. Diagonal Difference", "1. Diagonal Difference\1. Diagonal Difference.csproj", "{8574B9E3-C450-4082-B322-C800AFA1583A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Squares in Matrix", "2. Squares in Matrix\2. Squares in Matrix.csproj", "{4884C2E6-3E59-4CDC-B879-60C4859BC41C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2. Squares in Matrix", "2. Squares in Matrix\2. Squares in Matrix.csproj", "{4884C2E6-3E59-4CDC-B879-60C4859BC41C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. Maximal Sum", "3. Maximal Sum\3. Maximal Sum.csproj", "{FED170F7-07D8-40FD-951D-DDCEA3A6C347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3. Maximal Sum", "3. Maximal Sum\3. Maximal Sum.csproj", "{FED170F7-07D8-40FD-951D-DDCEA3A6C347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. Matrix Shuffling", "4. Matrix Shuffling\4. Matrix Shuffling.csproj", "{2CF8ECC2-86B7-44B6-B661-9F1809067C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4. Matrix Shuffling", "4. Matrix Shuffling\4. Matrix Shuffling.csproj", "{2CF8ECC2-86B7-44B6-B661-9F1809067C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Snake Moves", "5. Snake Moves\5. Snake Moves.csproj", "{E486738A-2790-4397-96A5-6D316685B010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. Jagged Array Manipulator", "6. Jagged Array Manipulator\6. Jagged Array Manipulator.csproj", "{CC505DC0-4825-4CEA-8FDE-CC620ED76270}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. Knight Game", "7. Knight Game\7. Knight Game.csproj", "{F04BC999-DC41-49DB-8A74-0C01095685B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{2CF8ECC2-86B7-44B6-B661-9F1809067C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CF8ECC2-86B7-44B6-B661-9F1809067C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CF8ECC2-86B7-44B6-B661-9F1809067C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E486738A-2790-4397-96A5-6D316685B010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E486738A-2790-4397-96A5-6D316685B010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E486738A-2790-4397-96A5-6D316685B010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E486738A-2790-4397-96A5-6D316685B010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC505DC0-4825-4CEA-8FDE-CC620ED76270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC505DC0-4825-4CEA-8FDE-CC620ED76270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC505DC0-4825-4CEA-8FDE-CC620ED76270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC505DC0-4825-4CEA-8FDE-CC620ED76270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04BC999-DC41-49DB-8A74-0C01095685B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04BC999-DC41-49DB-8A74-0C01095685B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04BC999-DC41-49DB-8A74-0C01095685B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04BC999-DC41-49DB-8A74-0C01095685B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
