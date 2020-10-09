@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace CarManufacturer
 {
@@ -45,7 +46,7 @@ namespace CarManufacturer
 
         public void Drive(double distance)
         {
-            double consumation = distance * FuelConsumption;
+            double consumation = (distance * FuelConsumption)/100;
 
             if (FuelQuantity - consumation > 0)
             {
@@ -59,7 +60,16 @@ namespace CarManufacturer
 
         public string WhoAmI()
         {
-            return $"Make: {this.Make}\nModel: {this.Model}\nYear: {this.Year}\nFuel: {this.FuelQuantity:F2}L";
+            StringBuilder sb = new StringBuilder();
+
+            sb
+                .AppendLine($"Make: {this.Make}")
+                .AppendLine($"Model: {this.Model}")
+                .AppendLine($"Year: {this.Year}")
+                .AppendLine($"HorsePowers: {this.Engine.HorsePower}")
+                .AppendLine($"FuelQuantity: {this.FuelQuantity}");
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

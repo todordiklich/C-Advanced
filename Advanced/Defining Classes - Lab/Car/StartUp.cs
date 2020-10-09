@@ -38,21 +38,26 @@ namespace CarManufacturer
             for (int i = 0; i < carArgs.Count; i++)
             {
                 string[] carArgsToAdd = carArgs[i].Split();
-                Car car = new Car(carArgsToAdd[0], carArgsToAdd[1], int.Parse(carArgsToAdd[2]), double.Parse(carArgsToAdd[3]), double.Parse(carArgsToAdd[4]), engines[i], tires[i]);
+
+                var make = carArgsToAdd[0];
+                var model = carArgsToAdd[1];
+                var year = int.Parse(carArgsToAdd[2]);
+                var fuelQuantity = double.Parse(carArgsToAdd[3]);
+                var fuelConsumption = double.Parse(carArgsToAdd[4]);
+                var engineIndex = int.Parse(carArgsToAdd[5]);
+                var tireIndex = int.Parse(carArgsToAdd[6]);
+
+                Car car = new Car(make, model, year, fuelQuantity, fuelConsumption, engines[engineIndex], tires[tireIndex]);
 
                 cars.Add(car);
             }
 
-            cars.ForEach(c => c.Drive(0.2));
-            cars = cars.Where(c => c.Year >= 2017).Where(c => c.Engine.HorsePower > 330).Where(c => c.Tires.Select(t => t.Pressure).Sum() > 9 && c.Tires.Select(t => t.Pressure).Sum() < 10).ToList();
+            cars = cars.Where(c => c.Year >= 2017 && c.Engine.HorsePower > 330 && c.Tires.Sum(t => t.Pressure) >= 9 && c.Tires.Sum(t => t.Pressure) <= 10).ToList();
 
             foreach (var car in cars)
             {
-                Console.WriteLine($"Make: {car.Make}");
-                Console.WriteLine($"Model: {car.Model}");
-                Console.WriteLine($"Year: {car.Year}");
-                Console.WriteLine($"HorsePowers: {car.Engine.HorsePower}");
-                Console.WriteLine($"FuelQuantity: {car.FuelQuantity:F1}");
+                car.Drive(20);
+                Console.WriteLine(car.WhoAmI());
             }
         }
 
