@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Define a Class Person", "01. Define a Class Person\01. Define a Class Person.csproj", "{B3AD571A-D5A7-4A4F-A622-F3B839822E7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Define a Class Person", "01. Define a Class Person\01. Define a Class Person.csproj", "{B3AD571A-D5A7-4A4F-A622-F3B839822E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Creating Constructors", "02. Creating Constructors\02. Creating Constructors.csproj", "{676F139B-2748-49B5-AE4D-5B64344AC2AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Creating Constructors", "02. Creating Constructors\02. Creating Constructors.csproj", "{676F139B-2748-49B5-AE4D-5B64344AC2AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03OldestFamilyMember", "03. Oldest Family Member\03OldestFamilyMember.csproj", "{33DEB84C-0DE4-4503-9043-2C9689E8BDCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03OldestFamilyMember", "03. Oldest Family Member\03OldestFamilyMember.csproj", "{33DEB84C-0DE4-4503-9043-2C9689E8BDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04OpinionPoll", "04. Opinion Poll\04OpinionPoll.csproj", "{AC5562FA-7885-47D3-8DC7-928E077C7E77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04OpinionPoll", "04. Opinion Poll\04OpinionPoll.csproj", "{AC5562FA-7885-47D3-8DC7-928E077C7E77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05DateModifier", "05. Date Modifier\05DateModifier.csproj", "{2C594D1F-B1B6-4FD6-8689-D1CA6F547B13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05DateModifier", "05. Date Modifier\05DateModifier.csproj", "{2C594D1F-B1B6-4FD6-8689-D1CA6F547B13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06SpeedRacing", "06. Speed Racing\06SpeedRacing.csproj", "{CD24C01D-C7BB-48B7-A33A-4840F5B357BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06SpeedRacing", "06. Speed Racing\06SpeedRacing.csproj", "{CD24C01D-C7BB-48B7-A33A-4840F5B357BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07RawData", "07RawData\07RawData.csproj", "{AFC7AB56-4541-4746-8E4E-2322F1AB4BD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07RawData", "07RawData\07RawData.csproj", "{AFC7AB56-4541-4746-8E4E-2322F1AB4BD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08CarSalesman", "08. Car Salesman\08CarSalesman.csproj", "{B8595E17-C5FD-416A-BDF0-EB3065B656B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08CarSalesman", "08. Car Salesman\08CarSalesman.csproj", "{B8595E17-C5FD-416A-BDF0-EB3065B656B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09PokemonTrainer", "09. Pokemon Trainer\09PokemonTrainer.csproj", "{04D679D5-8129-4E9C-B08E-BC850C713675}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B8595E17-C5FD-416A-BDF0-EB3065B656B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8595E17-C5FD-416A-BDF0-EB3065B656B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8595E17-C5FD-416A-BDF0-EB3065B656B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D679D5-8129-4E9C-B08E-BC850C713675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D679D5-8129-4E9C-B08E-BC850C713675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D679D5-8129-4E9C-B08E-BC850C713675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D679D5-8129-4E9C-B08E-BC850C713675}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
