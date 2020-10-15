@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Generics___Lab
+namespace Generics___Exercises
 {
     class Program
     {
