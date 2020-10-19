@@ -19,11 +19,8 @@ namespace EqualityLogic
 
                 Person person = new Person(name, age);
 
-                if (!sortedSet.Contains(person))
-                {
-                    sortedSet.Add(person);
-                    hashSet.Add(person);
-                }
+                sortedSet.Add(person);
+                hashSet.Add(person);
             }
 
             Console.WriteLine(sortedSet.Count);
