@@ -1,55 +1,32 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Froggy
 {
     public class Lake: IEnumerable<int>
     {
-        private List<int> stones;
-        private List<int> path;
+        private readonly List<int> stones;
 
-        public Lake(List<int> stones)
+        public Lake(ICollection<int> stones)
         {
-            this.stones = stones;
-            this.path = new List<int>();
-
-            this.MoveForward();
-            this.MoveBackwards();
-        }
-
-        private void MoveForward()
-        {
-            for (int i = 0; i < this.stones.Count; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    this.path.Add(stones[i]);
-                }
-            }
-        }
-
-        private void MoveBackwards()
-        {
-            for (int i = this.stones.Count - 1; i >= 0; i--)
-            {
-                if (i % 2 != 0)
-                {
-                    this.path.Add(this.stones[i]);
-                }
-            }
-        }
-
-        public void Print()
-        {
-            Console.WriteLine(string.Join(", ", this.path));
+            this.stones = stones.ToList();
         }
 
         public IEnumerator<int> GetEnumerator()
         {
-            for (int i = 0; i < this.path.Count; i++)
+            for (int i = 0; i < this.stones.Count; i+=2)
             {
-                yield return this.path[i];
+                yield return this.stones[i];
+            }
+
+            for (int i = this.stones.Count - 1; i > 0; i--)
+            {
+                if (i % 2 != 0)
+                {
+                    yield return this.stones[i];
+                }
             }
         }
 

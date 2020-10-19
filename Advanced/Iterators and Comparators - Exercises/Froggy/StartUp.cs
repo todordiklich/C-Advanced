@@ -16,7 +16,7 @@ namespace Froggy
 
             Lake lake = new Lake(stones);
 
-            lake.Print();
+            Console.WriteLine(string.Join(", ", lake));
         }
     }
 }
