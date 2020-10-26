@@ -7,23 +7,19 @@ namespace _1._Recursive_Array_Sum
     {
         static void Main(string[] args)
         {
-            //int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            int[] array = new int[] { 1, 2, 3 };
+            int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-            Console.WriteLine(Sum(array, array.Length));
+            Console.WriteLine(Sum(array, 0));
         }
 
         private static int Sum(int[] array, int index)
         {
-            if (index <= 0)
+            if (index >= array.Length)
             {
                 return 0;
             }
 
-            int current = Sum(array, index - 1);
-            int sum = array[index - 1] + current;
-
-            return sum;
+            return array[index] + Sum(array, index + 1);
         }
     }
 }
