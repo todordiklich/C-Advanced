@@ -125,6 +125,120 @@
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void FindMostExpensiveProductsShouldReturnTwoElements()
+        {
+            IProduct product2 = new Product("P2", 10, 2);
+            productStock.Add(product);
+            productStock.Add(product2);
+
+            int actualResult = productStock.FindMostExpensiveProducts().Count();
+            int expectedResult = 2;
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void FindMostExpensiveProductsShouldReturnOneElements()
+        {
+            IProduct product2 = new Product("P2", 50, 2);
+            productStock.Add(product);
+            productStock.Add(product2);
+
+            int actualResult = productStock.FindMostExpensiveProducts().Count();
+            int expectedResult = 1;
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void FindAllByQuantityShouldReturnOneElements()
+        {
+            IProduct product2 = new Product("P2", 50, 2);
+            productStock.Add(product);
+            productStock.Add(product2);
+
+            int actualResult = productStock.FindAllByQuantity(2).Count();
+            int expectedResult = 1;
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void FindAllByQuantityShouldReturnTwoElements()
+        {
+            IProduct product2 = new Product("P2", 50, 1);
+            productStock.Add(product);
+            productStock.Add(product2);
+
+            int actualResult = productStock.FindAllByQuantity(1).Count();
+            int expectedResult = 2;
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetEnumeratorShouldReturnTenElements()
+        {
+            GenerateProducts(10);
+
+            foreach (var p in products)
+            {
+                productStock.Add(p);
+            }
+
+            int expectedResult = 0;
+
+            foreach (var product in productStock)
+            {
+                Assert.AreEqual(expectedResult.ToString(), product.Label);
+                expectedResult++;
+            }
+        }
+
+        [Test]
+        public void ThisGetterShouldReturnElement()
+        {
+            GenerateProducts(10);
+
+            foreach (var p in products)
+            {
+                productStock.Add(p);
+            }
+
+            string expectedResult = "0";
+
+            Assert.AreEqual(expectedResult, productStock[0].Label);
+        }
+
+        [Test]
+        public void ThisGetterShouldThrowException()
+        {
+            IProduct p;
+            Assert.Throws<IndexOutOfRangeException>(() => p = productStock[1]);
+        }
+
+        [Test]
+        public void ThisSetterShouldThrowIndexOutOfRangeException()
+        {
+            IProduct p = new Product("0", 0, 0);
+            Assert.Throws<IndexOutOfRangeException>(() => productStock[1] = p);
+        }
+
+        [Test]
+        public void ThisSetterShouldSetCorrectlyElement()
+        {
+            GenerateProducts(2);
+
+            foreach (var p in products)
+            {
+                productStock.Add(p);
+            }
+
+            IProduct expectedResult = new Product("99", 99, 99);
+            productStock[0] = expectedResult;
+
+            Assert.AreEqual(expectedResult.Label, productStock[0].Label);
+        }
 
         private void GenerateProducts(int count)
         {

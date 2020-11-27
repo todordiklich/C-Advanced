@@ -14,8 +14,8 @@ namespace INStock.Contracts
         public IProduct FindByLabel(string label);
         public IEnumerable<IProduct> FindAllInPriceRange(decimal lo, decimal hi);
         public IEnumerable<IProduct> FindAllByPrice(decimal price);
-        public IEnumerable<IProduct> FindMostExpensiveProducts(int count);
+        public IEnumerable<IProduct> FindMostExpensiveProducts();
         public IEnumerable<IProduct> FindAllByQuantity(int quantityNeeded);
-        public IEnumerable<IProduct> GetEnumerator<Product>();
+        public IEnumerator<IProduct> GetEnumerator();
     }
 }

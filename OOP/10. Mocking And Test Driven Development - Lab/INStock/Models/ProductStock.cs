@@ -3,10 +3,11 @@ using System.Linq;
 using System.Collections.Generic;
 
 using INStock.Contracts;
+using System.Collections;
 
 namespace INStock.Models
 {
-    public class ProductStock : IProductStock
+    public class ProductStock : IProductStock, IEnumerable<IProduct>
     {
         private List<IProduct> products;
 
@@ -92,21 +93,26 @@ namespace INStock.Models
         {
             return this.products.Where(p => p.Price == price);
         }
+        public IEnumerable<IProduct> FindMostExpensiveProducts()
+        {
+            IProduct mostExpensiveProduct = this.products.OrderByDescending(p => p.Price).ToList()[0];
+
+            return this.products.Where(p => p.Price == mostExpensiveProduct.Price);
+        }
 
         public IEnumerable<IProduct> FindAllByQuantity(int quantityNeeded)
         {
-            throw new NotImplementedException();
+            return this.products.Where(p => p.Quantity == quantityNeeded);
         }
 
-        public IEnumerable<IProduct> GetEnumerator<Product>()
+        public IEnumerator<IProduct> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return this.products.GetEnumerator();
         }
 
-        public IEnumerable<IProduct> FindMostExpensiveProducts(int count)
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
-
     }
 }
