@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonDemo", "SingletonDemo\SingletonDemo.csproj", "{E5B716C4-3B31-4758-8D64-157BBA89877E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonDemo", "SingletonDemo\SingletonDemo.csproj", "{E5B716C4-3B31-4758-8D64-157BBA89877E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Facade\Facade.csproj", "{FCA90920-5167-413D-9412-5B6E70A828CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPattern", "CommandPattern\CommandPattern.csproj", "{96C4189D-7898-4724-B94F-3A4769D22485}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{E5B716C4-3B31-4758-8D64-157BBA89877E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5B716C4-3B31-4758-8D64-157BBA89877E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5B716C4-3B31-4758-8D64-157BBA89877E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA90920-5167-413D-9412-5B6E70A828CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA90920-5167-413D-9412-5B6E70A828CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA90920-5167-413D-9412-5B6E70A828CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA90920-5167-413D-9412-5B6E70A828CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C4189D-7898-4724-B94F-3A4769D22485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C4189D-7898-4724-B94F-3A4769D22485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C4189D-7898-4724-B94F-3A4769D22485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C4189D-7898-4724-B94F-3A4769D22485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
