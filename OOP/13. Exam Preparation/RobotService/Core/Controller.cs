@@ -1,20 +1,20 @@
-﻿using RobotService.Core.Contracts;
-using RobotService.Models.Garages;
-using RobotService.Models.Garages.Contracts;
-using RobotService.Models.Procedures;
-using RobotService.Models.Procedures.Contracts;
+﻿using System;
+
 using RobotService.Models.Robots;
-using RobotService.Models.Robots.Contracts;
+using RobotService.Models.Garages;
+using RobotService.Core.Contracts;
+using RobotService.Models.Procedures;
 using RobotService.Utilities.Messages;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using RobotService.Models.Robots.Contracts;
+using RobotService.Models.Garages.Contracts;
+using RobotService.Models.Procedures.Contracts;
 
 namespace RobotService.Core
 {
     public class Controller : IController
     {
         private IGarage garage;
+
         private IProcedure chargeProcedure;
         private IProcedure chipProcedure;
         private IProcedure polishProcedure;
@@ -53,27 +53,27 @@ namespace RobotService.Core
 
         public string History(string procedureType)
         {
-            if (procedureType == "Charge")
+            if (procedureType == nameof(Charge))
             {
                 return chargeProcedure.History();
             }
-            else if (procedureType == "Chip")
+            else if (procedureType == nameof(Chip))
             {
                 return chipProcedure.History();
             }
-            else if (procedureType == "Polish")
+            else if (procedureType == nameof(Polish))
             {
                 return polishProcedure.History();
             }
-            else if (procedureType == "Rest")
+            else if (procedureType == nameof(Rest))
             {
                 return restProcedure.History();
             }
-            else if (procedureType == "TechCheck")
+            else if (procedureType == nameof(TechCheck))
             {
                 return techCheckProcedure.History();
             }
-            else if (procedureType == "Work")
+            else if (procedureType == nameof(Work))
             {
                 return workProcedure.History();
             }
@@ -87,15 +87,15 @@ namespace RobotService.Core
         {
             IRobot robot;
 
-            if (robotType == "HouseholdRobot")
+            if (robotType == nameof(HouseholdRobot))
             {
                 robot = new HouseholdRobot(name, energy,happiness,procedureTime);
             }
-            else if (robotType == "PetRobot")
+            else if (robotType == nameof(PetRobot))
             {
                 robot = new PetRobot(name, energy, happiness, procedureTime);
             }
-            else if (robotType == "WalkerRobot")
+            else if (robotType == nameof(WalkerRobot))
             {
                 robot = new WalkerRobot(name, energy, happiness, procedureTime);
             }
@@ -158,7 +158,7 @@ namespace RobotService.Core
 
             workProcedure.DoService(this.garage.Robots[robotName], procedureTime);
 
-            return String.Format(OutputMessages.WorkProcedure, robotName);
+            return String.Format(OutputMessages.WorkProcedure, robotName, procedureTime);
         }
 
         private void CheckIfRobotExists(string robotName)

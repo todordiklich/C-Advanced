@@ -17,7 +17,7 @@ namespace RobotService.Models.Garages
             this.robots = new Dictionary<string, IRobot>();
         }
 
-        public IReadOnlyDictionary<string, IRobot> Robots => this.robots; // TODO: ReadOnly dictionary
+        public IReadOnlyDictionary<string, IRobot> Robots => this.robots;
 
         public void Manufacture(IRobot robot)
         {
@@ -43,7 +43,7 @@ namespace RobotService.Models.Garages
             this.robots[robotName].Owner = ownerName;
             this.robots[robotName].IsBought = true;
 
-            this.robots.Remove(robotName);
+            //this.robots.Remove(robotName);
         }
     }
 }
