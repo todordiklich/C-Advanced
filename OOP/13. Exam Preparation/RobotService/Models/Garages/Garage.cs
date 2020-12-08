@@ -43,7 +43,7 @@ namespace RobotService.Models.Garages
             this.robots[robotName].Owner = ownerName;
             this.robots[robotName].IsBought = true;
 
-            //this.robots.Remove(robotName);
+            this.robots.Remove(robotName);
         }
     }
 }

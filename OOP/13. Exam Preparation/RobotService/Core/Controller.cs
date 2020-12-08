@@ -131,8 +131,6 @@ namespace RobotService.Core
         {
             this.CheckIfRobotExists(robotName);
 
-            this.garage.Sell(robotName, ownerName);
-
             if (this.garage.Robots[robotName].IsChipped == true)
             {
                 return String.Format(OutputMessages.SellChippedRobot, ownerName);
@@ -141,6 +139,8 @@ namespace RobotService.Core
             {
                 return String.Format(OutputMessages.SellNotChippedRobot, ownerName);
             }
+
+            this.garage.Sell(robotName, ownerName);
         }
 
         public string TechCheck(string robotName, int procedureTime)
